@@ -1,0 +1,8 @@
+int32 completed_task_id
+---
+int32 task_id
+int32 pickup_x
+int32 pickup_y
+int32 dropoff_x
+int32 dropoff_y
+bool has_task
