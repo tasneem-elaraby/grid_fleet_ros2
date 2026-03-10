@@ -67,7 +67,7 @@ class Vehicle(Node):
     # ── طلب task ─────────────────────────────────────
     def get_new_task(self):
         req = RequestTask.Request()
-        req.completed_task_id = self.current_task_id
+        req.vehicle_id = self.v_id
         future = self.t_cli.call_async(req)
         rclpy.spin_until_future_complete(self, future)
         resp = future.result()

@@ -85,7 +85,7 @@ class TaskManagerNode(Node):
                     f"Pickup {task['pickup']} -> Dropoff {task['dropoff']}"
                 )
 
-                response.success = True
+                response.has_task = True
                 response.task_id = task['id']
                 response.pickup_x = task['pickup'][0]
                 response.pickup_y = task['pickup'][1]
@@ -95,7 +95,7 @@ class TaskManagerNode(Node):
 
         # No tasks left
         self.get_logger().info(f"Vehicle {vehicle_id} requested a task but none available")
-        response.success = False
+        response.has_task = False
         response.task_id = 0
         response.pickup_x = -1
         response.pickup_y = 0
