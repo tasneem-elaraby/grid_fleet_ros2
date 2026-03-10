@@ -1,4 +1,4 @@
-int32 completed_task_id
+string completed_task_id
 ---
 int32 task_id
 int32 pickup_x

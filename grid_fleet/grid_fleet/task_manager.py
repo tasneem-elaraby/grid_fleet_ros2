@@ -28,7 +28,7 @@ class TaskManagerNode(Node):
         self.completed_count = 0   # Count of tasks completed
 
         #track last task assigned to each vehicle
-        self.vehicle_last_task = {}  # key: 'A', 'B', 'C', value: last task id
+        self.vehicle_last_task = {}  # key: 'A', 'B', 'C', value: last task vehicle id
 
         #service to handle task requests
         self.task_service = self.create_service(
